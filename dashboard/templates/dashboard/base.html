@@ -1,0 +1,26 @@
+{% load static %}
+{% if user.is_authenticated %}
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+	<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</head>
+<body>
+    <div class="page-header">
+        <h1><a href="/">canvasグラフのサンプル</a></h1>
+    </div>
+    <div class="content">
+        <!-- ここが対応 -->
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div class="page-footer">
+        <h4><a href="/">copyright @ hayate.nakayama Ehime Uni</a></h1>
+    </div>
+</body>
+<script src="{% static 'assets/main-js/bundle.js' %}"></script>
+</html>
+{% endif %}
